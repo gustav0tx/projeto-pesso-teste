@@ -1,0 +1,10 @@
+const { cadastrarLivro, consultarEstoque, consultarLivro, excluirLivro } = require('./controller/livroController')
+
+console.log('Cadastrando livro 1984 de George Orwell do gênero de Distopia')
+console.log(`${cadastrarLivro("1984", "George Orwell", "Distopia.").mensagem}`)
+console.log('Verificando o Estoque de livros')
+console.log(`Livros encontrados: ${consultarEstoque().total}`)
+console.log('Consultando o autor do livro 1984')
+console.log(`${consultarLivro('1984').livro.autor}`)
+console.log('Retirar livro 1984')
+console.log(`${excluirLivro('1984').mensagem}`)

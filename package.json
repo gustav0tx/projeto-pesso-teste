@@ -1,0 +1,27 @@
+{
+  "name": "projeto-pesso-teste",
+  "version": "1.0.0",
+  "description": "> Projeto pessoal desenvolvido com lógica de programação pura (sem bibliotecas externas), testes automatizados com Jest e pipeline de CI/CD com GitHub Actions.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustav0tx/projeto-pesso-teste.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gustav0tx/projeto-pesso-teste/issues"
+  },
+  "homepage": "https://github.com/gustav0tx/projeto-pesso-teste#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
