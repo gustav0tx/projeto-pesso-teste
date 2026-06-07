@@ -1,4 +1,3 @@
-// 🧪 Testes automatizados — Estoque de Livros
 const {
   adicionarLivro,
   removerLivro,
@@ -9,14 +8,10 @@ const {
 
 const { limparBanco } = require("../database/livroDatabase")
 
-// 🔁 Antes de cada teste, o banco começa vazio (Requisito 4)
 beforeEach(() => {
   limparBanco()
 })
 
-// ─────────────────────────────────────────────
-// 📌 REQUISITO 1 — Adicionar livro com sucesso
-// ─────────────────────────────────────────────
 describe("Requisito 1 - Cadastro de livro", () => {
   test("Deve retornar true ao cadastrar um livro válido", () => {
     const resultado = adicionarLivro(
@@ -37,9 +32,6 @@ describe("Requisito 1 - Cadastro de livro", () => {
   })
 })
 
-// ─────────────────────────────────────────────
-// 📌 REQUISITO 2 — Campos obrigatórios
-// ─────────────────────────────────────────────
 describe("Requisito 2 - Campos obrigatórios", () => {
   test("Deve retornar false se o título não for informado", () => {
     const resultado = adicionarLivro("", "Autor Teste", "Descrição.")
@@ -62,9 +54,6 @@ describe("Requisito 2 - Campos obrigatórios", () => {
   })
 })
 
-// ─────────────────────────────────────────────
-// 📌 REQUISITO 3 — Não cadastrar livro duplicado
-// ─────────────────────────────────────────────
 describe("Requisito 3 - Livro duplicado", () => {
   test("Deve retornar false ao tentar cadastrar livro já existente", () => {
     adicionarLivro("1984", "George Orwell", "Distopia clássica.")
@@ -79,9 +68,6 @@ describe("Requisito 3 - Livro duplicado", () => {
   })
 })
 
-// ─────────────────────────────────────────────
-// 📌 REQUISITO 4 — Remover livro
-// ─────────────────────────────────────────────
 describe("Requisito 4 - Remoção de livro", () => {
   test("Deve retornar true ao remover um livro existente", () => {
     adicionarLivro("Sapiens", "Yuval Harari", "História da humanidade.")

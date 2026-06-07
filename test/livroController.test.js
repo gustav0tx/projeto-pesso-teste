@@ -74,9 +74,6 @@ describe("excluirLivro", () => {
   })
 })
 
-// ─────────────────────────────────────────────
-// 📌 consultarLivro
-// ─────────────────────────────────────────────
 describe("consultarLivro", () => {
   test("Deve retornar sucesso true ao encontrar livro", () => {
     cadastrarLivro("Harry Potter", "J.K. Rowling", "Mundo mágico.")
@@ -108,9 +105,6 @@ describe("consultarLivro", () => {
   })
 })
 
-// ─────────────────────────────────────────────
-// 📌 consultarEstoque
-// ─────────────────────────────────────────────
 describe("consultarEstoque", () => {
   test("Deve retornar total 0 quando o estoque estiver vazio", () => {
     const resultado = consultarEstoque()
